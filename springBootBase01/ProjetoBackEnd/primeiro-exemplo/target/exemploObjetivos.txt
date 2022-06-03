@@ -1,0 +1,26 @@
+Objetivo:
+
+- Criar uma API REstFull para controle de produtos
+
+O que precisa ter:
+
+	MODELO = OK!
+ 		* id
+ 		* nome
+ 		* quantidade
+ 		* valor
+ 		* observacao
+ 		
+ 	REPOSITORIO DE PRODUTO = OK!
+ 		* Métodos: obterTodos, obterPorId, adicionar, atualizar, deletar.
+ 		
+ 	SERVIÇO DE PRODUTO (é esse cara que vai usar o repositório!!) = OK!
+ 		*** Obs.: Ele precisa ter as mesmas coisas que o repositório, 
+ 		mas pode ter regras de negócio ou não.
+ 		* Métodos: obterTodos, obterPorId, adicionar, atualizar, deletar.
+ 		
+ 	CONTROLLER DE PRODUTO = OK!
+ 		*** Será nossa classe principal, ele que irá fazer as requisições, 
+ 		e trabalhar com todos os métodos da nossa API. Ele é responsável pelos ENDPOINTS.
+ 		* Métodos: obterTodos, obterPorId, adicionar, atualizar, deletar.
+ 		
