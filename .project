@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>springBootBase01</name>
+=======
+	<name>ProjetoBackEnd</name>
+>>>>>>> 1ba0effb3527b43dee6960e36a4cf2a8fd90df11
 	<comment></comment>
 	<projects>
 	</projects>
