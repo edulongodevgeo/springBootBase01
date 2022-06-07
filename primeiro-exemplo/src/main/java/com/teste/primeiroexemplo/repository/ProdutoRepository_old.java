@@ -11,11 +11,11 @@ import com.teste.primeiroexemplo.model.Produto;
 import com.teste.primeiroexemplo.model.exception.ResourceNotFoundException;
 
 @Repository
-public class ProdutoRepository {
+public class ProdutoRepository_old {
 
 	//Simulando o banco de dados...
 	private List<Produto> produtos = new ArrayList<Produto>();
-	private Long ultimoId = (long) 0; //se der problema, mudar pra Integer.
+	private Integer ultimoId = (Integer) 0; //se der problema, mudar pra Integer.
 	
 	//Criar métodos
 	
@@ -25,7 +25,7 @@ public class ProdutoRepository {
 	}
 	
 	//Método que retorna o produto encontrado pelo seu id.
-	public Optional<Produto> obterPorId(Long id) {
+	public Optional<Produto> obterPorId(Integer id) {
 		return produtos
 				.stream()
 				.filter(produto -> produto.getId() == id)
@@ -43,7 +43,7 @@ public class ProdutoRepository {
 	}
 	
 	//Método para deletar o produto por id.
-	public void deletar(Long id) {
+	public void deletar(Integer id) {
 		produtos.removeIf(produto -> produto.getId() == id); // expressão lambda.
 	}
 	

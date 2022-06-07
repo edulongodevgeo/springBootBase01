@@ -1,27 +1,39 @@
+
 package com.teste.primeiroexemplo.model;
 
-public class Produto {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-	private Long id;
+@Entity
+public class Produto {
+	
+	@Id // Vai transformar esta coluna em PRIMARY KEY
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // gera um novo Id incremental, automático....
+	private Integer id;
 	private String nome;
 	private Integer quantidade;
 	private Double valor;
 	private String observacao;
 	
+	public Produto() {
+		
+	}
 	
-	
-	public Produto(Long id, String nome, Integer quantidade, Double valor, String observacao) {
-		//super();
+	public Produto(Integer id, String nome, Integer quantidade, Double valor, String observacao) {
+		super();
 		this.id = id;
 		this.nome = nome;
 		this.quantidade = quantidade;
 		this.valor = valor;
 		this.observacao = observacao;
 	}
-	public Long getId() {
+
+	public Integer getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getNome() {
